@@ -1,9 +1,9 @@
-import 'hono'
-import { jsxRenderer } from 'hono/jsx-renderer'
+import "hono";
+import { jsxRenderer } from "hono/jsx-renderer";
 
-declare module 'hono' {
+declare module "hono" {
   interface ContextRenderer {
-    (content: string | Promise<string>, props?: { title?: string }): Response
+    (content: string | Promise<string>, props?: { title?: string }): Response;
   }
 }
 
@@ -14,12 +14,13 @@ export const renderer = jsxRenderer(
         <head>
           <link href="/static/style.css" rel="stylesheet" />
           <title>{title}</title>
+          <script src="https://unpkg.com/htmx.org@1.9.8"></script>
         </head>
         <body>{children}</body>
       </html>
-    )
+    );
   },
   {
-    docType: true
+    docType: true,
   }
-)
+);

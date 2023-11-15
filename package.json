@@ -7,9 +7,12 @@
     "deploy": "$npm_execpath run build && wrangler pages deploy dist"
   },
   "dependencies": {
+    "@hono/zod-validator": "^0.1.11",
     "better-sqlite3": "^9.1.1",
     "drizzle-orm": "^0.29.0",
-    "hono": "^3.10.0"
+    "drizzle-zod": "^0.5.1",
+    "hono": "^3.10.0",
+    "zod": "^3.22.4"
   },
   "devDependencies": {
     "@cloudflare/workers-types": "^4.20230914.0",
